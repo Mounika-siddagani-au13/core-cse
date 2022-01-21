@@ -1,0 +1,116 @@
+Q1. List out different OOPS principles and explain ? 
+Answer:
+The main principles of object-oriented programming are:
+Abstraction.
+Encapsulation.
+Inheritance.
+Polymorphism.
+Association.
+Aggregation.
+Composition.
+Abstraction
+Abstraction aims to hide complexity from the users and show them only the relevant information. 
+For example, if you want to drive a car, you don’t need to know about its internal workings. 
+The same is true of Java classes. You can hide internal implementation details by using abstract classes or interfaces. 
+On the abstract level, you only need to define the method signatures (name and parameter list) and let each class 
+implement them in their own way.
+
+Encapsulation
+Encapsulation allows us to protect the data stored in a class from system-wide access. As its name suggests, it safeguards the internal 
+contents of a class like a real-life capsule. You can implement encapsulation in Java by keeping the fields (class variables) private and 
+providing public getter and setter methods to each of them. Java Beans are examples of fully encapsulated classes.
+
+Inheritance
+Inheritance makes it possible to create a child class that inherits the fields and methods of the parent class. The child class can override 
+the values and methods of the parent class, however it’s not necessary. It can also add new data and functionality to its parent. Parent classes 
+are also called superclasses or base classes, while child classes are known as subclasses or derived classes as well. Java uses the extends keyword 
+to implement the principle of inheritance in code.
+
+Polymorphism
+Polymorphismrefers to the ability to perform a certain action in different ways. In Java, polymorphism can take two forms: method overloading and 
+method overriding. Method overloading happens when various methods with the same name are present in a class. When they are called they are differentiated 
+by the number, order, and types of their parameters. Method overriding occurs when the child class overrides a method of its parent.
+
+Association
+Besides the four main principles of OOP, Java also works with three further concepts (association, aggregation, composition) you can make use of when 
+designing your programs. Aggregation is a special form of association, while composition is a special form of aggregation.
+Association simply means the act of establishing a relationship between two unrelated classes. For example, when you declare two fields of different 
+types (e.g. Car and Bicycle) within the same class and make them interact with each other, you have performed association.
+
+Aggregation.
+Aggregation is a narrower kind of association. It occurs when there’s a one-way (HAS-A) relationship between the two classes you associate through their objects. 
+For example, every Passenger has a Car but a Car doesn’t necessarily have a Passenger. When you declare the Passenger class, you can create a field of the Car 
+type that shows which car the passenger belongs to. Then, when you instantiate a new Passenger object, you can access the data stored in the related Car as well.
+
+Composition
+Compositionis a stricter form of aggregation. It occurs when the two classes you associate are mutually dependent on each other and can’t exist without each other. 
+For example, take a Car and an Engine class. A Car cannot run without an Engine, while an Engine also can’t function without being built into a Car. This kind of 
+relationship between objects is also called a PART-OF relationship.
+
+Q2. Explain DNS servers, with examples
+
+The DNS is a system of records of domain names and IP addresses that allows browsers to find the right IP address that corresponds to a hostname URL entered into it.
+When we try to access a website, we generally type in their domain names, like cdnetworks.com or wired.com or nytimes.com, into the web browser. Web browsers however 
+need to know the exact IP addresses to load content for the website. The DNS is what translates the domain names to the IP addresses so that the resources can be loaded from the website’s server.
+Sometimes, websites can have numerous IP addresses corresponding to a single domain name. For example, large sites like Google will have users querying a server from distant parts of the world. 
+The server that a computer from Singapore tries to query will likely be different from the one a different computer from say Toronto will try to reach, even if the site name entered in the 
+browser is the same. This is where DNS caching comes in.
+**DNS Caching**
+DNS caching is the process of storing DNS data on the DNS records closer to a requesting client to be able to resolve the DNS query earlier. This avoids the problem of additional queries further 
+down the chain and improves web page load times and reduces bandwidth consumption. 
+The amount of time that the DNS records are stored in DNS cache is called time to live or TTL. This period of time is important as it determines how “fresh” the DNS records are and whether it matches
+recent updates to IP addresses.
+DNS caching can be done at the browser level or at the operating system (OS level).
+Browser DNS Caching
+Since web browsers generally store DNS records for a set amount of time, it is usually the first place that is checked when a user makes a DNS record. Being on the browser, there are fewer steps 
+involved in checking the DNS cache and making the DNS request to an IP address.
+Operating system (OS) level DNS caching
+Once a DNS query leaves an end user’s machine, the next stop where a match is sought is at the operating system level. A process inside the operating system, called the “stub resolver” checks its 
+own DNS cache to see if it has the record. If not, the query is sent outside the local network to the Internet Service Provider (ISP).
+
+Q3. Which traversal of BST gives sorted output and why?
+Answer:
+Inorder of BST will produce a sorted ascending order. Also, a Reverse Inorder of BST will produce a sorted descending order.
+[7, 29, 40, 41, 44, 50, 53, 67, 84, 97]
+Inorder of BST will produce a sorted ascending order.
+Also, a Reverse Inorder of BST will produce a sorted descending order.
+
+Q4. Explain all disc scheduling algorithms?
+Answer:
+Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. Disk scheduling is also known as I/O scheduling.
+Disk scheduling is important because:
+Multiple I/O requests may arrive by different processes and only one I/O request can be served at a time by the disk controller. Thus other I/O 
+requests need to wait in the waiting queue and need to be scheduled.
+Two or more request may be far from each other so can result in greater disk arm movement.
+Hard drives are one of the slowest parts of the computer system and thus need to be accessed in an efficient manner.
+There are many Disk Scheduling Algorithms but before discussing them let’s have a quick look at some of the important terms:
+Seek Time:Seek time is the time taken to locate the disk arm to a specified track where the data is to be read or write. So the disk scheduling algorithm 
+that gives minimum average seek time is better.
+Rotational Latency: Rotational Latency is the time taken by the desired sector of disk to rotate into a position so that it can access the read/write heads. 
+So the disk scheduling algorithm that gives minimum rotational latency is better.
+Transfer Time: Transfer time is the time to transfer the data. It depends on the rotating speed of the disk and number of bytes to be transferred
+
+
+Q5. Explain swap memory
+Answer:
+Memory swapping is a computer technology that enables an operating system to provide more memory to a running 
+application or process than is available in physical random access memory (RAM). When the physical system memory 
+is exhausted, the operating system can opt to make use of memory swapping techniques to get additional memory.
+Memory swapping is among the multiple techniques for memory management in modern systems. Physical memory alone is 
+sometimes not sufficient, which is why there are different ways of augmenting RAM in a system with these additional options.
+
+Q6. List range of private IP addresses.
+Answer:
+A private IP address is a non-Internet facing IP address on an internal network. Private IP addresses are provided by network devices, such as routers, using network address translation (NAT).
+Originally it was thought that IPv4's 32-bit IP addressing system -- yielding 4,294,967,296 theoretical IP addresses -- would be adequate for all purposes. However, as the Internet
+grew it became apparent that something had to fill the gap between IPv4 and a future system (which would turn out to be IPv6) that would take time to develop and implement. Private IP addressing 
+and NAT fill that gap with the private IP range.
+Private IP addressing uses addresses from the class C range reserved for NAT (192.168.0.0 – 192.168.255.255). Private addresses can be assigned by the router using DHCP or be manually set,
+after which those addresses can communicate with one another through the router.
+Private IP addresses can only be guaranteed unique to an internal network, excepting conflicts. If a directly connected computer does not have a static IP address assigned, even assigning 
+a private IP address manually will not enable communication.
+Private IP addresses cannot be directly contacted over the Internet as a computer with a public IP address can. This situation affords an extra layer of security: A network NAT device
+communicates with the Internet using its public IP address from an ISP and checks to see if any incoming data was requested by one of the private IP-assigned computers. If so, it is directed
+to that computer; if not it is typically discarded.  
+Another benefit of using NAT, for those who do tend to have incoming requests -- like websites, file and game servers – is the ability to quickly switch servers in the event of a crash, 
+as the incoming traffic can all be forwarded to a back-up server very easily.
